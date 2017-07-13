@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+</head>
+<body>
+	<h1>Edit User {{ id }}</h1>
+	<form action="/users/{{ id }}/alter" method="post">
+		<label for="first_name">First Name:</label>
+		<input type="text" name="first_name" id="first_name" value="{{ user['first_name'] }}">
+		<label for="last_name">Last Name</label>
+		<input type="text" name="last_name" id="last_name" value="{{ user['last_name'] }}">
+		<label for="email">Email:</label>
+		<input type="text" name="email" id="email" value="{{ user['email'] }}">
+		<button>Create</button>
+	</form>
+	<a href="/users/{{ id }}">Show</a><a href="/users">Go Back</a>
+</body>
+</html>
